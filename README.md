@@ -40,6 +40,7 @@ Response Example:
 
 
 Code Functionality
+
 First player action needs to be given at the time of REST API call
 Second player action is generated randomly via code
 As per the game rules, result will be displayed for the first player, whether he wins or lose.
