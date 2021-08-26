@@ -33,7 +33,7 @@ public class RPSControllerTest {
 
         Mockito.when(randomActionGeneratorService.getRandomAction()).thenReturn(PlayerActionService.SCISSOR);
 
-        mockMvc.perform(post("/api/gameAction/ROCK")
+        mockMvc.perform(post("/api/rpsgame/ROCK")
                         .contentType(APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(jsonPath("playerOneAction", is("ROCK")))
@@ -45,7 +45,7 @@ public class RPSControllerTest {
 
         Mockito.when(randomActionGeneratorService.getRandomAction()).thenReturn(PlayerActionService.ROCK);
 
-        mockMvc.perform(post("/api/gameAction/SCISSOR")
+        mockMvc.perform(post("/api/rpsgame/SCISSOR")
                         .contentType(APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful())
                 .andExpect(jsonPath("playerOneAction", is("SCISSOR")))
